@@ -5,6 +5,9 @@
 from ggame import #add to this the star
 from random import randint 
 
+EMPTY = 0
+MISS = 1
+
 def buildBoard():
     
 def redrawAll():
