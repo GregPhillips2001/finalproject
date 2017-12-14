@@ -16,3 +16,4 @@ def computerTurn():
 def mouseClick():
 
 
+App().run()
