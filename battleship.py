@@ -2,4 +2,4 @@
 #12/14/17
 #battleship.py
 
-from ggame import
+from ggame import #add to this the star
