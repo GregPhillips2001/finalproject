@@ -11,11 +11,17 @@ EMPTY = 0
 MISS = 1
 
 def buildBoard():
+    board = []
+    
+    
+    
+    
+    
     for row in range(0,2):
         for col in range(0,4):
-            print(board[row][col],' ',end = '')
+            sprite(board[row][col],' ',end = '')
         print()
-    board = [["a","b","c","d","e"],['f','g','h','i','j'],['k','l','m','n','o']]
+    board = [[]*5,[]*5,[]*5,[]*5,[]*5]
     printBoard()
 
     
