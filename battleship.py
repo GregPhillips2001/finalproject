@@ -5,15 +5,17 @@
 from ggame import* 
 from random import randint 
 
+ROWS = 5
+COLS = 5
 EMPTY = 0
 MISS = 1
 
 def buildBoard():
-    for row in range(0,4):
+    for row in range(0,2):
         for col in range(0,4):
             print(board[row][col],' ',end = '')
         print()
-    board = [["a","b","c","d","e"],['f','g','h','i','j'],['k','l','m','n','o']
+    board = [["a","b","c","d","e"],['f','g','h','i','j'],['k','l','m','n','o']]
     printBoard()
 
     
