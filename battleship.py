@@ -37,6 +37,7 @@ if __name__ == '__main__':
     black = Color(0x000000,1)
     
     circle = CircleAsset(RADIUS,blackOutline)
+    redCircle = CircleAsset(RADIUS,blackOutline,red)
     
     buildBoard()
     redrawAll()
