@@ -21,10 +21,13 @@ def redrawAll():
             
 
 def pickComputerShips():
+    
 
 def computerTurn():
     
+    
 def mouseClick():
+    
     
 if __name__ == '__main__': 
     
