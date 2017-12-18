@@ -20,7 +20,7 @@ def redrawAll():
         item.destroy()
     for row in range(0,5):
         for col in range(0,5):
-            Sprite(circle,(RADIUS+2*row*RADIUS+500*i, RADIUS+2*column*RADIUS))
+            Sprite(circle,(RADIUS*row, RADIUS*col))
             
 
 #def pickComputerShips():
