@@ -22,13 +22,13 @@ def redrawAll():
             sprite(circle)
             
 
-def pickComputerShips():
+#def pickComputerShips():
     
 
-def computerTurn():
+#def computerTurn():
     
     
-def mouseClick():
+#def mouseClick():
     
     
 if __name__ == '__main__': 
