@@ -14,8 +14,8 @@ def buildBoard():
     board = []
     for row in range(0,2):
         for col in range(0,4):
-            sprite(board[row][col],' ',end = '')
-        print()
+            sprite(board[row][col],' ',end = '')#what does this do
+        return board
     board = [[]*5,[]*5,[]*5,[]*5,[]*5]
     printBoard()
 
@@ -34,6 +34,8 @@ if __name__ == '__main__':
     
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
+    
+    circle = CircleAsset(50,blackOutline)
 
 
 App().run()
