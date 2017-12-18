@@ -35,6 +35,7 @@ def redrawAll():
 if __name__ == '__main__': 
     
     data = {}
+    dataBoard = buildBoard()
     
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
@@ -45,7 +46,7 @@ if __name__ == '__main__':
     circle = CircleAsset(RADIUS,blackOutline,blue)
     redCircle = CircleAsset(RADIUS,blackOutline,red)
     
-    buildBoard()
+    dataBoard
     redrawAll()
 
     App().run()
