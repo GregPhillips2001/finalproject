@@ -7,14 +7,11 @@ from random import randint
 
 EMPTY = 0
 MISS = 1
+HIT = 2
+RADIUS = 45
 
 def buildBoard():
     board = []
-    
-    
-    
-    
-    
     for row in range(0,2):
         for col in range(0,4):
             sprite(board[row][col],' ',end = '')
@@ -32,6 +29,11 @@ def computerTurn():
 def mouseClick():
     
 if __name__ == '__main__': 
+    
+    data = {}
+    
+    red = Color(0xff0000,1)
+    black = Color(0x000000,1)
 
 
 App().run()
