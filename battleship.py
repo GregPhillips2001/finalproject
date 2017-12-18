@@ -5,8 +5,6 @@
 from ggame import* 
 from random import randint 
 
-ROWS = 5
-COLS = 5
 EMPTY = 0
 MISS = 1
 
