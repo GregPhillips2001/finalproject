@@ -46,8 +46,8 @@ if __name__ == '__main__':
     circle = CircleAsset(RADIUS,blackOutline,blue)
     redCircle = CircleAsset(RADIUS,blackOutline,red)
     
-    userText = TextAsset("User Board",fill=black,style="bold 40pt Times") 
-    Sprite(userText, (200,900))
+    userText = TextAsset("User Board",black,bold 40pt Times) 
+    Sprite(userText, (200,1000))
     
     dataBoard
     redrawAll()
