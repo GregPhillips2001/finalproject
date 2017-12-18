@@ -5,6 +5,7 @@
 from ggame import* 
 from random import randint 
 
+#Dictionary
 EMPTY = 0
 MISS = 1
 HIT = 2
@@ -19,7 +20,7 @@ def redrawAll():
         item.destroy()
     for row in range(0,5):
         for col in range(0,5):
-            Sprite(circle)
+            Sprite(circle,(RADIUS+2*row*RADIUS+500*i, RADIUS+2*column*RADIUS))
             
 
 #def pickComputerShips():
