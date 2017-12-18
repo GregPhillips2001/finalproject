@@ -38,6 +38,8 @@ if __name__ == '__main__':
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
     
+    blackOutline = LineStyle(1,black)
+    
     circle = CircleAsset(RADIUS,blackOutline)
     redCircle = CircleAsset(RADIUS,blackOutline,red)
     
