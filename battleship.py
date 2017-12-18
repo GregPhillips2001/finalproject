@@ -9,7 +9,7 @@ from random import randint
 EMPTY = 0
 MISS = 1
 HIT = 2
-RADIUS = 50
+RADIUS = 40
 
 def buildBoard():
     board = [[]*5,[]*5,[]*5,[]*5,[]*5]
