@@ -8,7 +8,7 @@ from random import randint
 EMPTY = 0
 MISS = 1
 HIT = 2
-RADIUS = 45
+RADIUS = 50
 
 def buildBoard():
     board = []
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
     
-    circle = CircleAsset(50,blackOutline)
+    circle = CircleAsset(RADIUS,blackOutline)
 
 
 App().run()
