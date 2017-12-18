@@ -15,6 +15,8 @@ def buildBoard():
     return board
     
 def redrawAll():
+    for item in App().spritelist[:]:
+        item.destroy()
      for row in range(0,5):
         for col in range(0,5):
             sprite(circle)
