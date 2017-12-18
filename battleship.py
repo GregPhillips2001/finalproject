@@ -39,6 +39,6 @@ if __name__ == '__main__':
     circle = CircleAsset(RADIUS,blackOutline)
     
     buildBoard()
+    redrawAll()
 
-
-App().run()
+    App().run()
