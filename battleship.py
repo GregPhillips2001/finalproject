@@ -11,17 +11,14 @@ HIT = 2
 RADIUS = 50
 
 def buildBoard():
-    board = []
-    for row in range(0,2):
-        for col in range(0,4):
-            sprite(circle,(row,col))
-            """sprite(board[row][col],' ',end = '')#what does this do"""
-        return board
     board = [[]*5,[]*5,[]*5,[]*5,[]*5]
-    printBoard()
-
+    return board
     
 def redrawAll():
+     for row in range(0,5):
+        for col in range(0,5):
+            sprite(circle)
+            
 
 def pickComputerShips():
 
