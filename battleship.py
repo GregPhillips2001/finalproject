@@ -43,8 +43,11 @@ def pickComputerShips():
 if __name__ == '__main__': 
     
     data = {}
-    dataBoard = buildBoard()
-    ["dataCompShips"] = buildBoard()
+    data["gameover"] = False
+    data["Board"] = buildBoard()
+    data["CompShips"] = buildBoard()
+    data["MyShips"] = 0 
+    
     
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
@@ -62,4 +65,5 @@ if __name__ == '__main__':
     pickComputerShips()
     redrawAll()
 
+    App().listenMouseEvent("click", mouseClick) #Listens for mouse click
     App().run()
