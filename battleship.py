@@ -41,6 +41,7 @@ if __name__ == '__main__':
     
     data = {}
     dataBoard = buildBoard()
+    dataCompShips = pickComputerShips()
     
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
@@ -55,6 +56,7 @@ if __name__ == '__main__':
     Sprite(userText,(200,700))
     
     dataBoard
+    dataCompShips
     redrawAll()
 
     App().run()
