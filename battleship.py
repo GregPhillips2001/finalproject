@@ -35,6 +35,8 @@ def pickComputerShips():
             if data["CompShips"][row][column] != SHIP:
                 data["CompShips"][row][column] = SHIP
                 Sprite(blackCircle, (col_, row_))
+    else:
+        
 
 #def computerTurn():
     
