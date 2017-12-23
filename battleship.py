@@ -47,7 +47,7 @@ def mouseClick(event):
                 coll = event.y//70
                 if data["playerBoard"][roww][coll] != BOAT:
                     data["playerBoard"][roww][coll] = BOAT
-                    Sprite(blackCircle, (coll + RADIUS*2, roww + RADIUS*2))
+                    Sprite(blackCircle, (RADIUS+2*coll*RADIUS, RADIUS+2*roww*RADIUS))
                     data["playerShips"] += 1
     """else:
         roww = event.x//70
