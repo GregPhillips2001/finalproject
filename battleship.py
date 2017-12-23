@@ -24,7 +24,7 @@ def redrawAll():
                 Sprite(circle,(RADIUS*2*row+RADIUS, RADIUS*2*col+RADIUS))
         for row in range(0,5):
             for col in range(0,5):
-                Sprite(circle,(RADIUS*2*row+RADIUS+500, RADIUS*2*col+RADIUS))        
+                Sprite(circle,(RADIUS*2*row+RADIUS+400, RADIUS*2*col+RADIUS))        
 
 """def pickComputerShips():
     pick = False
