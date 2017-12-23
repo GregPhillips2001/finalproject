@@ -34,6 +34,7 @@ def pickComputerShips():
             col = randint(0,4)
             if data["CompShips"][row][column] != SHIP:
                 data["CompShips"][row][column] = SHIP
+                Sprite(blackCircle, (col_, row_))
 
 #def computerTurn():
     
