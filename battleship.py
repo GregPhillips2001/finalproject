@@ -44,7 +44,7 @@ if __name__ == '__main__':
     
     data = {}
     dataBoard = buildBoard()
-    dataCompShips = buildBoard()
+    ["dataCompShips"] = buildBoard()
     
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
