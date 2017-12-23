@@ -26,7 +26,8 @@ def redrawAll():
             Sprite(circle,(RADIUS*2*row+RADIUS+450, RADIUS*2*col+RADIUS))        
 
 def pickComputerShips():
-    
+    pick = False
+    for i in range(1,4):
 
 #def computerTurn():
     
