@@ -27,9 +27,12 @@ def redrawAll():
 
 def pickComputerShips():
     pick = False
-    for i in range(1,4):
-        row = randint(0,4)
-        col = randint(0,4)
+    if pick == False:
+        for i in range(1,4):
+            row = randint(0,4)
+            col = randint(0,4)
+            if data["dataCompShips"][row][column] != SHIP:
+                data["dataCompShips"][row][column] = SHIP
 
 #def computerTurn():
     
@@ -41,7 +44,7 @@ if __name__ == '__main__':
     
     data = {}
     dataBoard = buildBoard()
-    dataCompShips = pickComputerShips()
+    dataCompShips = buildBoard()
     
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
@@ -56,7 +59,7 @@ if __name__ == '__main__':
     Sprite(userText,(200,700))
     
     dataBoard
-    dataCompShips
+    pickComputerShips()
     redrawAll()
 
     App().run()
