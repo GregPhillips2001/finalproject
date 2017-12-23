@@ -70,7 +70,7 @@ if __name__ == '__main__':
     Sprite(userText,(200,700))
 
     data["Board"]
-    pickComputerShips()
+    #pickComputerShips()
     redrawAll()
 
     App().listenMouseEvent("click", mouseClick) #Listens for mouse click
