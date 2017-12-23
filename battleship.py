@@ -48,6 +48,8 @@ def mouseClick():
                     data["CompShips"][roww][coll] = SHIP
                     Sprite(blackCircle, (coll + RADIUS*2, roww + RADIUS*2))
                     data["playerShips"] += 1
+    else:
+        
 
 if __name__ == '__main__': 
     data = {}
