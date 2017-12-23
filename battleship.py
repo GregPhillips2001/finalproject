@@ -45,8 +45,8 @@ def mouseClick(event):
             if event.x <= RADIUS*10 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = event.x//70
                 coll = event.y//70
-                if data["playerShips"][roww][coll] != BOAT:
-                    data["playerShips"][roww][coll] = BOAT
+                if data["playerBoard"][roww][coll] != BOAT:
+                    data["playerBoard"][roww][coll] = BOAT
                     Sprite(blackCircle, (coll + RADIUS*2, roww + RADIUS*2))
                     data["playerShips"] += 1
     """else:
@@ -57,7 +57,7 @@ def mouseClick(event):
 if __name__ == '__main__': 
     data = {}
     data["gameover"] = False
-    data["Board"] = buildBoard()
+    data["playerBoard"] = buildBoard()
     data["CompShips"] = buildBoard()
     data["playerShips"] = 0 
 
