@@ -26,7 +26,7 @@ def redrawAll():
             for col in range(0,5):
                 Sprite(circle,(RADIUS*2*row+RADIUS+400, RADIUS*2*col+RADIUS))        
 
-"""def pickComputerShips():
+def pickComputerShips():
     pick = False
     if pick == False:
         for i in range(1,4):
@@ -41,8 +41,14 @@ def redrawAll():
 def mouseClick():
     if data["gameover"] == False:
         if data["playerShips"] < 3:
-            if event.x <= RADIUS*10 and event.y <= RADIUS: #only runs if player clicked inside the x coordinates of the game"""
-    
+            if event.x <= RADIUS*10 and event.y <= RADIUS: #only runs if player clicked inside the x coordinates of the game
+                row_ = event.x//70
+                col_ = event.y//70
+                if data["CompShips"][row_][col_] != SHIP:
+                    data["CompShips"][row_][col_] = SHIP
+                    Sprite(blackCircle, (col_, row_))
+                    data["playerShips"] += 1
+                
 if __name__ == '__main__': 
     
     data = {}
@@ -60,13 +66,14 @@ if __name__ == '__main__':
     
     circle = CircleAsset(RADIUS,blackOutline,blue)
     redCircle = CircleAsset(RADIUS,blackOutline,red)
+    blackCircle = CircleAsset(RADIUS,blackOutline,black)
     
     userText = TextAsset("User Board",fill=black,style="bold 40pt Times") 
     Sprite(userText,(200,700))
     
     data["Board"]
-    #pickComputerShips()
+    pickComputerShips()
     redrawAll()
 
-    #App().listenMouseEvent("click", mouseClick) #Listens for mouse click
+    App().listenMouseEvent("click", mouseClick) #Listens for mouse click
     App().run()
