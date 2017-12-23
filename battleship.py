@@ -9,21 +9,22 @@ from random import randint
 EMPTY = 0
 MISS = 1
 HIT = 2
-RADIUS = 40
+RADIUS = 50
 
 def buildBoard():
     board = [[]*5,[]*5,[]*5,[]*5,[]*5]
     return board
     
 def redrawAll():
-    for item in App().spritelist[:]:
-        item.destroy()
-    for row in range(0,5):
-        for col in range(0,5):
-            Sprite(circle,(RADIUS*2*row+RADIUS, RADIUS*2*col+RADIUS))
-    for row in range(0,5):
-        for col in range(0,5):
-            Sprite(circle,(RADIUS*2*row+RADIUS+450, RADIUS*2*col+RADIUS))        
+    if data["gameover"] == False:
+        for item in App().spritelist[:]:
+            item.destroy()
+        for row in range(0,5):
+            for col in range(0,5):
+                Sprite(circle,(RADIUS*2*row+RADIUS, RADIUS*2*col+RADIUS))
+        for row in range(0,5):
+            for col in range(0,5):
+                Sprite(circle,(RADIUS*2*row+RADIUS+450, RADIUS*2*col+RADIUS))        
 
 def pickComputerShips():
     pick = False
@@ -31,14 +32,17 @@ def pickComputerShips():
         for i in range(1,4):
             row = randint(0,4)
             col = randint(0,4)
-            if data["dataCompShips"][row][column] != SHIP:
-                data["dataCompShips"][row][column] = SHIP
+            if data["CompShips"][row][column] != SHIP:
+                data["CompShips"][row][column] = SHIP
 
 #def computerTurn():
     
     
-#def mouseClick():
-    
+def mouseClick():
+    if data["gameover"] == False:
+        if data["playerShips"] < 3:
+            if event.x <= RADIUS*10 and event.y <= RADIUS: #only runs if player clicked inside the x coordinates of the game
+            
     
 if __name__ == '__main__': 
     
@@ -46,7 +50,7 @@ if __name__ == '__main__':
     data["gameover"] = False
     data["Board"] = buildBoard()
     data["CompShips"] = buildBoard()
-    data["MyShips"] = 0 
+    data["playerShips"] = 0 
     
     
     red = Color(0xff0000,1)
@@ -61,7 +65,7 @@ if __name__ == '__main__':
     userText = TextAsset("User Board",fill=black,style="bold 40pt Times") 
     Sprite(userText,(200,700))
     
-    dataBoard
+    data["Board"]
     pickComputerShips()
     redrawAll()
 
