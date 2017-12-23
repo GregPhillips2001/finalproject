@@ -38,7 +38,7 @@ def redrawAll():
 #def computerTurn():
 
 
-def mouseClick():
+def mouseClick(event):
     if data["gameover"] == False:
         if data["playerShips"] < 3:
             if event.x <= RADIUS*10 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
