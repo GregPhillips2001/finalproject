@@ -74,7 +74,7 @@ if __name__ == '__main__':
     userText = TextAsset("User Board",fill=black,style="bold 40pt Times") 
     Sprite(userText,(200,700))
 
-    data["Board"]
+    buildBoard()
     #pickComputerShips()
     redrawAll()
 
