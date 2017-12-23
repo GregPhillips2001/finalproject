@@ -28,6 +28,8 @@ def redrawAll():
 def pickComputerShips():
     pick = False
     for i in range(1,4):
+        row = randint(0,4)
+        col = randint(0,4)
 
 #def computerTurn():
     
