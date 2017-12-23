@@ -25,7 +25,7 @@ def redrawAll():
         for col in range(0,5):
             Sprite(circle,(RADIUS*2*row+RADIUS+450, RADIUS*2*col+RADIUS))        
 
-#def pickComputerShips():
+def pickComputerShips():
     
 
 #def computerTurn():
