@@ -49,6 +49,8 @@ def mouseClick():
                     Sprite(blackCircle, (coll + RADIUS*2, roww + RADIUS*2))
                     data["playerShips"] += 1
     else:
+        roww = event.x//70
+        coll = event.y//70
         
 
 if __name__ == '__main__': 
