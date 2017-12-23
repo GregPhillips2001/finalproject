@@ -9,7 +9,7 @@ from random import randint
 EMPTY = 0
 MISS = 1
 HIT = 2
-RADIUS = 50
+RADIUS = 35
 
 def buildBoard():
     board = [[]*5,[]*5,[]*5,[]*5,[]*5]
@@ -68,5 +68,5 @@ if __name__ == '__main__':
     #pickComputerShips()
     redrawAll()
 
-    App().listenMouseEvent("click", mouseClick) #Listens for mouse click
+    #App().listenMouseEvent("click", mouseClick) #Listens for mouse click
     App().run()
