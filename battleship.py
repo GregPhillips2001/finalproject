@@ -24,9 +24,9 @@ def redrawAll():
                 Sprite(circle,(RADIUS*2*row+RADIUS, RADIUS*2*col+RADIUS))
         for row in range(0,5):
             for col in range(0,5):
-                Sprite(circle,(RADIUS*2*row+RADIUS+450, RADIUS*2*col+RADIUS))        
+                Sprite(circle,(RADIUS*2*row+RADIUS+500, RADIUS*2*col+RADIUS))        
 
-def pickComputerShips():
+"""def pickComputerShips():
     pick = False
     if pick == False:
         for i in range(1,4):
@@ -41,8 +41,7 @@ def pickComputerShips():
 def mouseClick():
     if data["gameover"] == False:
         if data["playerShips"] < 3:
-            if event.x <= RADIUS*10 and event.y <= RADIUS: #only runs if player clicked inside the x coordinates of the game
-            
+            if event.x <= RADIUS*10 and event.y <= RADIUS: #only runs if player clicked inside the x coordinates of the game"""
     
 if __name__ == '__main__': 
     
