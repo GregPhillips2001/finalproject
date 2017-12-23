@@ -26,14 +26,14 @@ def redrawAll():
             for col in range(0,5):
                 Sprite(circle,(RADIUS*2*row+RADIUS+400, RADIUS*2*col+RADIUS))        
 
-#def pickComputerShips():
+"""def pickComputerShips():
     pick = False
     if pick == False:
         for i in range(1,4):
             row = randint(0,4)
             col = randint(0,4)
-            if data["CompShips"][row][column] != SHIP:
-                data["CompShips"][row][column] = SHIP
+            if data["CompShips"][row][col] != SHIP:
+                data["CompShips"][row][col] = SHIP"""
 
 #def computerTurn():
 
