@@ -46,7 +46,7 @@ def mouseClick():
                 col_ = event.y//70
                 if data["CompShips"][row_][col_] != SHIP:
                     data["CompShips"][row_][col_] = SHIP
-                    Sprite(blackCircle, (col_, row_))
+                    Sprite(blackCircle, (col_ + RADIUS*2, row_ + RADIUS*2))
                     data["playerShips"] += 1
 
 if __name__ == '__main__': 
