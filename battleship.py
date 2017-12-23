@@ -9,6 +9,7 @@ from random import randint
 EMPTY = 0
 MISS = 1
 HIT = 2
+BOAT = 3
 RADIUS = 35
 
 def buildBoard():
@@ -44,8 +45,8 @@ def mouseClick(event):
             if event.x <= RADIUS*10 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = event.x//70
                 coll = event.y//70
-                if data["CompShips"][roww][coll] != SHIP:
-                    data["CompShips"][roww][coll] = SHIP
+                if data["CompShips"][roww][coll] != BOAT:
+                    data["CompShips"][roww][coll] = BOAT
                     Sprite(blackCircle, (coll + RADIUS*2, roww + RADIUS*2))
                     data["playerShips"] += 1
     """else:
