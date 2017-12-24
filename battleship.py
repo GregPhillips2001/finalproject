@@ -17,9 +17,9 @@ def buildBoard():
     return board
     
 def redrawAll():
-    if data["gameover"] == False
-    userText = TextAsset("User Board",fill=black,style="bold 40pt Times") 
-    Sprite(userText,(200,700))
+    if data["gameover"] == False:
+        userText = TextAsset("User Board",fill=black,style="bold 40pt Times") 
+        Sprite(userText,(200,700))
         for item in App().spritelist[:]:
             item.destroy()
         for row in range(0,5):
