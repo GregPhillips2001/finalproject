@@ -21,7 +21,7 @@ def redrawAll():
         for item in App().spritelist[:]:
             item.destroy()
         userText = TextAsset("Player",fill=black,style="bold 40pt Times") 
-        Sprite(userText, (200,400))
+        Sprite(userText, (150,400))
         for row in range(0,5):
             for col in range(0,5):
                 Sprite(circle,(RADIUS*2*row+RADIUS, RADIUS*2*col+RADIUS))
