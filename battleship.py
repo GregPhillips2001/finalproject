@@ -13,7 +13,7 @@ BOAT = 3
 RADIUS = 35
 
 def buildBoard():
-    board = [[]*5,[]*5,[]*5,[]*5,[]*5]
+    board = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
     return board
     
 def redrawAll():
