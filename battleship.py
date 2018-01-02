@@ -55,8 +55,8 @@ def mouseClick(event):
             if event.x <= RADIUS*10+400 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = event.x//70
                 coll = event.y//70
-                if data["userBoard"][roww][coll] != BOAT:
-                    data["userBoard"][roww][coll] = MISS
+                if data["computerBoard"][roww][coll] != BOAT:
+                    data["computerBoard"][roww][coll] = MISS
                     Sprite(whiteCircle, (RADIUS+2*coll*RADIUS, RADIUS+2*roww*RADIUS))
         
 
@@ -65,6 +65,7 @@ if __name__ == '__main__':
     data["gameover"] = False
     data["userBoard"] = buildBoard()
     data["CompShips"] = buildBoard()
+    data["ComputerShips"] = buildBoard()
     data["playerShips"] = 0 
 
     red = Color(0xff0000,1)
