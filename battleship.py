@@ -61,6 +61,8 @@ def mouseClick(event):
                 if data["ComputerBoard"][roww][coll] != BOAT:
                     data["ComputerBoard"][roww][coll] = MISS
                     Sprite(whiteCircle, ((RADIUS+2*coll*RADIUS)+400, RADIUS+2*roww*RADIUS))
+                elif:
+                    data["ComputerBoard"][roww][coll] = BOAT:
         
 
 if __name__ == '__main__': 
