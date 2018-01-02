@@ -23,7 +23,7 @@ def redrawAll():
         userText = TextAsset("Player",fill=black,style="bold 40pt Times") 
         Sprite(userText, (110,375))
         computerText = TextAsset("Computer",fill=black,style="bold 40pt Times") 
-        Sprite(computerText, (515,375))
+        Sprite(computerText, (465,375))
         for row in range(0,5):
             for col in range(0,5):
                 Sprite(circle,(RADIUS*2*row+RADIUS, RADIUS*2*col+RADIUS))
