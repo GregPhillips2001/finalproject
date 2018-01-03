@@ -34,11 +34,13 @@ def redrawAll():
 def pickComputerShips():
     pick = False
     if pick == False:
-        for i in range(1,4):
+        i = 0
+        while i<3:
             row = randint(0,4)
             col = randint(0,4)
             if data["CompShips"][row][col] != BOAT:
                 data["CompShips"][row][col] = BOAT
+            i += 1
 
 #def computerTurn():
 
@@ -61,9 +63,8 @@ def mouseClick(event):
                     data["ComputerBoard"][roww][coll] = MISS
                     Sprite(whiteCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
                 else:
-                    data["ComputerBoard"][roww][coll] = BOAT:
-                        data["ComputerBoard"][roww][coll] = HIT
-                        Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
+                    data["ComputerBoard"][roww][coll] = HIT
+                    Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
                         
         
 
