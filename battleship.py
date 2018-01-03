@@ -74,7 +74,7 @@ def mouseClick(event):
 
 if __name__ == '__main__': 
     data = {}
-    data["playerturn"] == True
+    data["playerturn"] = True
     data["userBoard"] = buildBoard()
     data["CompShips"] = buildBoard()
     data["ComputerBoard"] = buildBoard()
