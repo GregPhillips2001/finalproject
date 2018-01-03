@@ -39,7 +39,6 @@ def pickComputerShips():
             col = randint(0,4)
             if data["CompShips"][row][col] != BOAT:
                 data["CompShips"][row][col] = BOAT
-    pick = True
 
 #def computerTurn():
 
@@ -60,9 +59,12 @@ def mouseClick(event):
                 coll = event.y//70
                 if data["ComputerBoard"][roww][coll] != BOAT:
                     data["ComputerBoard"][roww][coll] = MISS
-                    Sprite(whiteCircle, ((RADIUS+2*coll*RADIUS)+400, RADIUS+2*roww*RADIUS))
-                #elif:
-                    #data["ComputerBoard"][roww][coll] = BOAT:
+                    Sprite(whiteCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
+                else:
+                    data["ComputerBoard"][roww][coll] = BOAT:
+                        data["ComputerBoard"][roww][coll] = HIT
+                        Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
+                        
         
 
 if __name__ == '__main__': 
