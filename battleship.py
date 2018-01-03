@@ -30,7 +30,7 @@ def redrawAll():
         for row in range(0,5):
             for col in range(0,5):
                 Sprite(circle,(RADIUS*2*row+RADIUS+400, RADIUS*2*col+RADIUS))        
-        print(data["ComputerBoard"])
+                
 def pickComputerShips():
     i = 0
     while i<3:
@@ -40,9 +40,16 @@ def pickComputerShips():
             data["ComputerBoard"][row][col] = BOAT
             i += 1
 
-"""def computerTurn():
-    if data["playerturn"] == False:"""
-
+def computerTurn():
+    if data["playerturn"] == False:
+        row = randint(0,4)
+        col = randint(0,4)
+        if data["userBoard"][row][col] != BOAT:
+            data["userBoard"][row][col] = MISS
+            Sprite(whiteCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
+        else:
+            data["userBoard"][row][col] = HIT
+            Sprite(redCircle, ((RADIUS+2*roww*RADIUS), RADIUS+2*coll*RADIUS))
 
 
 def mouseClick(event):
@@ -65,7 +72,7 @@ def mouseClick(event):
                 else:
                     data["ComputerBoard"][roww][coll] = HIT
                     Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
-            #data["playerturn"] = False
+            data["playerturn"] = False
 
                         
         
@@ -75,7 +82,6 @@ if __name__ == '__main__':
     data["gameover"] = False
     data["playerturn"] = True
     data["userBoard"] = buildBoard()
-    data["CompShips"] = buildBoard()
     data["ComputerBoard"] = buildBoard()
     data["playerShips"] = 0 
 
