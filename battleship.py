@@ -67,7 +67,7 @@ def mouseClick(event):
                 else:
                     data["ComputerBoard"][roww][coll] = HIT
                     Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
-                    data["playerturn"] = False
+            data["playerturn"] = False
 
                         
         
