@@ -36,17 +36,19 @@ def pickComputerShips():
     if pick == False:
         i = 0
         while i<3:
-            row = randint(0,4)
-            col = randint(0,4)
+            row = randint(1,5)
+            col = randint(1,5)
             if data["CompShips"][row][col] != BOAT:
                 data["CompShips"][row][col] = BOAT
             i += 1
 
-#def computerTurn():
+def computerTurn():
+    if data["playerturn"] == False:
+
 
 
 def mouseClick(event):
-    if data["gameover"] == False:
+    if data["playerturn"] == True:
         if data["playerShips"] < 3:
             if event.x <= RADIUS*10 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = event.y//70
@@ -65,12 +67,14 @@ def mouseClick(event):
                 else:
                     data["ComputerBoard"][roww][coll] = HIT
                     Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
+        data["playerturn"] == False:
+
                         
         
 
 if __name__ == '__main__': 
     data = {}
-    data["gameover"] = False
+    data["playerturn"] == True
     data["userBoard"] = buildBoard()
     data["CompShips"] = buildBoard()
     data["ComputerBoard"] = buildBoard()
