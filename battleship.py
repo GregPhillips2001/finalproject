@@ -36,8 +36,8 @@ def pickComputerShips():
     if pick == False:
         i = 0
         while i<3:
-            row = randint(1,5)
-            col = randint(1,5)
+            row = randint(0,4)
+            col = randint(0,4)
             if data["CompShips"][row][col] != BOAT:
                 data["CompShips"][row][col] = BOAT
             i += 1
@@ -74,6 +74,7 @@ def mouseClick(event):
 
 if __name__ == '__main__': 
     data = {}
+    data["gameover"] = False
     data["playerturn"] = True
     data["userBoard"] = buildBoard()
     data["CompShips"] = buildBoard()
