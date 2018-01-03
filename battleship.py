@@ -46,10 +46,10 @@ def computerTurn():
         col = randint(0,4)
         if data["userBoard"][row][col] != BOAT:
             data["userBoard"][row][col] = MISS
-            Sprite(whiteCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
+            Sprite(whiteCircle, ((RADIUS+2*row*RADIUS)+400, RADIUS+2*col*RADIUS))
         else:
             data["userBoard"][row][col] = HIT
-            Sprite(redCircle, ((RADIUS+2*roww*RADIUS), RADIUS+2*coll*RADIUS))
+            Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
 
 
 def mouseClick(event):
@@ -73,6 +73,7 @@ def mouseClick(event):
                     data["ComputerBoard"][roww][coll] = HIT
                     Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
             data["playerturn"] = False
+            computerTurn()
 
                         
         
