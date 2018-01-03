@@ -36,8 +36,8 @@ def pickComputerShips():
     while i<3:
         row = randint(0,4)
         col = randint(0,4)
-        if data["CompShips"][row][col] != BOAT:
-            data["CompShips"][row][col] = BOAT
+        if data["ComputerBoard"][row][col] != BOAT:
+            data["ComputerBoard"][row][col] = BOAT
             i += 1
 
 """def computerTurn():
