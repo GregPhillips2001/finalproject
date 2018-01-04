@@ -50,10 +50,16 @@ def computerTurn():
         else:
             data["userBoard"][row][col] = HIT
             Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
+            for HIT in data["userBoard"] == 3:
+                data["gameover"] = True
+                computerwin = TextAsset("Computer Wins",fill=black,style="bold 80pt Times") 
+                Sprite(computerwin, (250,150))
+                
     else:
         computerTurn()
 
 def mouseClick(event):
+    if data["gameover"] = False:
         if data["playerShips"] < 3:
             if event.x <= RADIUS*10 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = event.y//70
