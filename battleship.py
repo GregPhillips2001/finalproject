@@ -31,7 +31,6 @@ def redrawAll():
             for col in range(0,5):
                 Sprite(circle,(RADIUS*2*row+RADIUS+400, RADIUS*2*col+RADIUS)) 
         
-                
 def pickComputerShips():
     i = 0
     while i<3:
@@ -75,9 +74,6 @@ def mouseClick(event):
                     Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
             computerTurn()
 
-                        
-        
-
 if __name__ == '__main__': 
     data = {}
     data["gameover"] = False
@@ -97,8 +93,6 @@ if __name__ == '__main__':
     redCircle = CircleAsset(RADIUS,blackOutline,red)
     blackCircle = CircleAsset(RADIUS,blackOutline,black)
     whiteCircle = CircleAsset(RADIUS,blackOutline,white)
-
-   
 
     buildBoard()
     pickComputerShips()
