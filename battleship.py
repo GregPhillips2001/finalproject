@@ -30,7 +30,7 @@ def redrawAll():
         for row in range(0,5):
             for col in range(0,5):
                 Sprite(circle,(RADIUS*2*row+RADIUS+400, RADIUS*2*col+RADIUS)) 
-        print(data["userBoard"])
+        
                 
 def pickComputerShips():
     i = 0
@@ -41,10 +41,11 @@ def pickComputerShips():
             data["ComputerBoard"][row][col] = BOAT
             i += 1
 
-def computerTurn():
+def computerTurn():  #how can i make it so that it is unable to choose a place which has already been chosen
+#i am having trouble because if it chooses an already chosen place it just does not run rather than choosing a new place
     row = randint(0,4)
     col = randint(0,4)
-    if data["userBoard"][row][col] != MISS:
+    if data["userBoard"][row][col] != MISS and data["userBoard"][row][col] != BOAT:
         if data["userBoard"][row][col] != BOAT:
             data["userBoard"][row][col] = MISS
             Sprite(whiteCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
@@ -61,9 +62,10 @@ def mouseClick(event):
                 roww = event.y//70
                 coll = event.x//70
                 if data["userBoard"][roww][coll] != BOAT:
-                    data["userBoard"][roww][coll] = BOAT
+                    data["userBoard"][coll][roww] = BOAT
                     Sprite(blackCircle, (RADIUS+2*coll*RADIUS, RADIUS+2*roww*RADIUS))
                     data["playerShips"] += 1
+                    print(data["userBoard"])
         else:
             if event.x <= (RADIUS*10)+400 and event.x >= (RADIUS*10)+50 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = (event.x-400)//70
