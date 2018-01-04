@@ -33,32 +33,32 @@ def redrawAll():
         
 def pickComputerShips():
     if data["gameover"] == False:
-    i = 0
-    while i<3:
-        row = randint(0,4)
-        col = randint(0,4)
-        if data["ComputerBoard"][row][col] != BOAT:
-            data["ComputerBoard"][row][col] = BOAT
-            i += 1
+        i = 0
+        while i<3:
+            row = randint(0,4)
+            col = randint(0,4)
+            if data["ComputerBoard"][row][col] != BOAT:
+                data["ComputerBoard"][row][col] = BOAT
+                i += 1
 
 def computerTurn():  
     if data["gameover"] == False:
-    row = randint(0,4)
-    col = randint(0,4)
-    if data["userBoard"][row][col] != MISS and data["userBoard"][row][col] != HIT:
-        if data["userBoard"][row][col] != BOAT:
-            data["userBoard"][row][col] = MISS
-            Sprite(whiteCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
+        row = randint(0,4)
+        col = randint(0,4)
+        if data["userBoard"][row][col] != MISS and data["userBoard"][row][col] != HIT:
+            if data["userBoard"][row][col] != BOAT:
+                data["userBoard"][row][col] = MISS
+                Sprite(whiteCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
+            else:
+                data["userBoard"][row][col] = HIT
+                Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
+                for HIT in data["userBoard"] == 3:
+                    data["gameover"] = True
+                    computerwin = TextAsset("Computer Wins",fill=black,style="bold 80pt Times") 
+                    Sprite(computerwin, (250,150))
+                    
         else:
-            data["userBoard"][row][col] = HIT
-            Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
-            for HIT in data["userBoard"] == 3:
-                data["gameover"] = True
-                computerwin = TextAsset("Computer Wins",fill=black,style="bold 80pt Times") 
-                Sprite(computerwin, (250,150))
-                
-    else:
-        computerTurn()
+            computerTurn()
 
 def mouseClick(event):
     if data["gameover"] == False:
