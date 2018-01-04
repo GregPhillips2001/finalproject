@@ -56,7 +56,7 @@ def computerTurn():
                 if data["comphits"] == 3:
                     data["gameover"] = True
                     computerwin = TextAsset("Computer Wins",fill=black,style="bold 80pt Times") 
-                    Sprite(computerwin, (240,100))
+                    Sprite(computerwin, (180,100))
                     
         else:
             computerTurn()
