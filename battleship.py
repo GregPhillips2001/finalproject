@@ -52,7 +52,8 @@ def computerTurn():
             else:
                 data["userBoard"][row][col] = HIT
                 Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
-                if HIT in data["userBoard"] == 3:
+                data["comphits"] += 1
+                if data["comphits"] == 3:
                     data["gameover"] = True
                     computerwin = TextAsset("Computer Wins",fill=black,style="bold 80pt Times") 
                     Sprite(computerwin, (250,150))
@@ -80,7 +81,8 @@ def mouseClick(event):
                 else:
                     data["userBoard"][roww][coll] = HIT
                     Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
-                    if HIT in data["ComputerBoard"] == 3:
+                    data["playerhits"] += 1
+                    if data["playerhits"] == 3:
                         data["gameover"] = True
                         playerwin = TextAsset("Player Wins",fill=black,style="bold 80pt Times") 
                         Sprite(playerwin, (250,150))
@@ -92,6 +94,8 @@ if __name__ == '__main__':
     data["userBoard"] = buildBoard()
     data["ComputerBoard"] = buildBoard()
     data["playerShips"] = 0 
+    data["playerhits"] = 0
+    data["comphits"] = 0
 
     red = Color(0xff0000,1)
     black = Color(0x000000,1)
