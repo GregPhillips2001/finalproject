@@ -45,7 +45,7 @@ def computerTurn():  #how can i make it so that it is unable to choose a place w
 #i am having trouble because if it chooses an already chosen place it just does not run rather than choosing a new place
     row = randint(0,4)
     col = randint(0,4)
-    if data["userBoard"][row][col] != MISS and data["userBoard"][row][col] != BOAT:
+    if data["userBoard"][row][col] != MISS and data["userBoard"][row][col] != HIT:
         if data["userBoard"][row][col] != BOAT:
             data["userBoard"][row][col] = MISS
             Sprite(whiteCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
