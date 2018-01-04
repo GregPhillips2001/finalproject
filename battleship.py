@@ -56,7 +56,7 @@ def computerTurn():
                 if data["comphits"] == 3:
                     data["gameover"] = True
                     computerwin = TextAsset("Computer Wins",fill=black,style="bold 80pt Times") 
-                    Sprite(computerwin, (250,150))
+                    Sprite(computerwin, (240,100))
                     
         else:
             computerTurn()
@@ -85,7 +85,7 @@ def mouseClick(event):
                     if data["playerhits"] == 3:
                         data["gameover"] = True
                         playerwin = TextAsset("Player Wins",fill=black,style="bold 80pt Times") 
-                        Sprite(playerwin, (250,150))
+                        Sprite(playerwin, (240,100))
                 computerTurn()
 
 if __name__ == '__main__': 
