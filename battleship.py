@@ -40,8 +40,7 @@ def pickComputerShips():
             data["ComputerBoard"][row][col] = BOAT
             i += 1
 
-def computerTurn():  #how can i make it so that it is unable to choose a place which has already been chosen
-#i am having trouble because if it chooses an already chosen place it just does not run rather than choosing a new place
+def computerTurn():  
     row = randint(0,4)
     col = randint(0,4)
     if data["userBoard"][row][col] != MISS and data["userBoard"][row][col] != HIT:
