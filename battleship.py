@@ -110,7 +110,8 @@ if __name__ == '__main__': #this part of the program sets up the game
     white = Color(0xffffff,1)
 
     blackOutline = LineStyle(1,black)
-
+    
+    #circles for the different parts of the board and things placed 
     circle = CircleAsset(RADIUS,blackOutline,blue)
     redCircle = CircleAsset(RADIUS,blackOutline,red)
     blackCircle = CircleAsset(RADIUS,blackOutline,black)
