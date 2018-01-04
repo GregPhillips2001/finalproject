@@ -53,7 +53,6 @@ def computerTurn():  #how can i make it so that it is unable to choose a place w
             Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
 
 def mouseClick(event):
-    if data["playerturn"] == True:
         if data["playerShips"] < 3:
             if event.x <= RADIUS*10 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = event.y//70
