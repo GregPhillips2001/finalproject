@@ -32,7 +32,7 @@ def redrawAll():
                 Sprite(circle,(RADIUS*2*row+RADIUS+400, RADIUS*2*col+RADIUS)) 
         
 def pickComputerShips():
-    if data["gameover"] = False:
+    if data["gameover"] == False:
     i = 0
     while i<3:
         row = randint(0,4)
@@ -42,7 +42,7 @@ def pickComputerShips():
             i += 1
 
 def computerTurn():  
-    if data["gameover"] = False:
+    if data["gameover"] == False:
     row = randint(0,4)
     col = randint(0,4)
     if data["userBoard"][row][col] != MISS and data["userBoard"][row][col] != HIT:
@@ -61,7 +61,7 @@ def computerTurn():
         computerTurn()
 
 def mouseClick(event):
-    if data["gameover"] = False:
+    if data["gameover"] == False:
         if data["playerShips"] < 3:
             if event.x <= RADIUS*10 and event.y <= RADIUS*10: #only runs if player clicked inside the x coordinates of the game
                 roww = event.y//70
