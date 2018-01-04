@@ -44,13 +44,14 @@ def pickComputerShips():
 def computerTurn():
     row = randint(0,4)
     col = randint(0,4)
-    if data["userBoard"][row][col] != BOAT:
-        data["userBoard"][row][col] = MISS
-        Sprite(whiteCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
-    else:
-        data["userBoard"][row][col] = HIT
-        Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
-    mouseClick()
+    if data["userBoard"][row][col] != MISS:
+        if data["userBoard"][row][col] != BOAT:
+            data["userBoard"][row][col] = MISS
+            Sprite(whiteCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
+        else:
+            data["userBoard"][row][col] = HIT
+            Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
+        mouseClick()
 
 
 def mouseClick(event):
