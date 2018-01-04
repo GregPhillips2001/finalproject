@@ -81,9 +81,9 @@ def mouseClick(event):
                     data["userBoard"][roww][coll] = HIT
                     Sprite(redCircle, ((RADIUS+2*roww*RADIUS)+400, RADIUS+2*coll*RADIUS))
                     for HIT in data["ComputerBoard"] == 3:
-                    data["gameover"] = True
-                    playerwin = TextAsset("Player Wins",fill=black,style="bold 80pt Times") 
-                    Sprite(playerwin, (250,150))
+                        data["gameover"] = True
+                        playerwin = TextAsset("Player Wins",fill=black,style="bold 80pt Times") 
+                        Sprite(playerwin, (250,150))
                 computerTurn()
 
 if __name__ == '__main__': 
