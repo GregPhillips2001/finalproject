@@ -51,6 +51,8 @@ def computerTurn():  #how can i make it so that it is unable to choose a place w
         else:
             data["userBoard"][row][col] = HIT
             Sprite(redCircle, ((RADIUS+2*row*RADIUS), RADIUS+2*col*RADIUS))
+    else:
+        computerTurn()
 
 def mouseClick(event):
         if data["playerShips"] < 3:
